@@ -40,7 +40,7 @@ public class ScreenUtils {
         Display display = wm.getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        return size.x;
+        return size.y;
     }
 
 }
