@@ -55,7 +55,7 @@ if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction() 
 
 #####################################################
 
-  <FrameLayout
+        <FrameLayout
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
