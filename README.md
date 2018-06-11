@@ -51,7 +51,7 @@
 #### MainApplication.java 
 ```
 
- -MainApp,onCreate --> { Contextor.getInstance().init(getApplicationContext()); }
+ Contextor.getInstance().init(getApplicationContext());
  
 ```
 
