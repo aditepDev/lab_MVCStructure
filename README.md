@@ -1,71 +1,108 @@
 # lab_MVCStructure
+# 1.mvc structure
+## 1.1.binding
 
-# 1.binding
+* 1.1 เรียกใช้  binding
 
-//1.1 เรียกใช้ binding
+#### app/gradle
+```
+ dataBinding{enabled true}
+```
 
--" dataBinding{enabled true} " --> app/gradle
+## 1.2.mvc
 
-# 2.mvc
+* 2.1 สร้าง package รูปแบบ MVC
 
-//2.1 สร้าง package รูปแบบ MVC
-
+```
 -activity -manager -util -view -fragment
+```
 
-//2.2 สร้าง MainApplication
+* 1.2.2 สร้าง MainApplication.java 
 
--create MainApplication.class
+```
+-create MainApplication.java
+```
+* 1.2.3 add MainApplication
+#### androidmanifest.xml
 
--add android:name=".MainApplication" --> androidmanifest
+```
+ android:name=".MainApplication"
+```
 
-# 3.liberry
+## 1.3.liberry
 
-//3.1 เรียกใช้ liberry
+* 1.3.1 เรียกใช้ liberry
+#### settings.gradle
+```
+ ,':TheCheeseLibrary'  
+ 
+```
+   * 1.3.1.1  add library เข้า ไปใน app
+   #### app/gradle
+   
+   ```
+   
+   implementation project(':TheCheeseLibrary')
+   
+   ```
 
--" ,':TheCheeseLibrary' " -> add library
+* 1.3.2 ใช้ Contextor ที่  MainApplication
 
-//3.2 ใช้ Contextor ที่ MainApplication
+#### MainApplication.java 
+```
 
-MainApp,onCreate --> { Contextor.getInstance().init(getApplicationContext()); }
-# 4.copy template
+ -MainApp,onCreate --> { Contextor.getInstance().init(getApplicationContext()); }
+ 
+```
 
-//4.1 ก๊อปปี้ template จาก libarry
+## 1.4.copy template
 
--singleton -fragment -customview -customviewgroup
+* 1.4.1 ก๊อปปี้ template จาก libarry
 
-# 5.create fragment_main
+```
+- singletontemplate 
+- fragmenttemplate
+- customviewtemplate
+- customviewgrouptemplate
 
-//5.1 สร้าง fragment เพื่อใช้ แทน activity_main
+```
 
-create fragment_main.xml --> layout xml
+## 1.5.create fragment_main
+#### res/layout
+* 1.5.1 สร้าง fragment เพื่อใช้ แทน activity_main
+```
+create fragment_main.xml 
 
-//5.2 ก๊อปปี้ template fragmentTemplat เปลี่ยนชื่อเป็น MainFragment
+```
+#### fragment
+* 5.2 ก๊อปปี้ template fragmentTemplat เปลี่ยนชื่อเป็น MainFragment
 
-create MainFragment.class --> fragment java
+```
+create MainFragment.java
 
-# 6.add mainfragment to mainactivity
+```
 
-// add fragment เข้าไปที่ activity
+## 1.6.add mainfragment to mainactivity 
 
--MainActivity
+* 1.6.1 add fragment เข้าไปที่ activity
 
-#####################################################
+#### activity_main.xml
 
-if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction() 
-.add(R.id.contentContainer, MainFragment.newInstance()) 
-.commit(); }
+``` 
+ 	  <FrameLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-#####################################################
+```
 
--activity_main.xml
+#### MainActivity.class
 
-#####################################################
-
-        <FrameLayout
-        android:id="@+id/contentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-        
- ######################################################
-
-        
+```  
+  if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.contentContainer, MainFragment.newInstance())
+                    .commit();
+        }
+	 
+``` 
