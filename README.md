@@ -56,6 +56,7 @@ if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction()
 .commit(); }
 
 #####################################################
+
 -activity_main.xml
 
 #####################################################
