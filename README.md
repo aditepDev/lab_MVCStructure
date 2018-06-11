@@ -1,4 +1,3 @@
-# lab_MVCStructure
 # 1.mvc structure
 ## 1.1.binding
 
@@ -13,15 +12,22 @@
 
 * 2.1 สร้าง package รูปแบบ MVC
 
-```
--activity -manager -util -view -fragment
-```
+#### /java/package
+
+#### activity
+#### manager
+#### util
+#### view 
+#### fragment
+
 
 * 1.2.2 สร้าง MainApplication.java 
 
-```
--create MainApplication.java
-```
+#### java/app
+
+-create 
+MainApplication.java
+
 * 1.2.3 add MainApplication
 #### androidmanifest.xml
 
@@ -51,7 +57,7 @@
 #### MainApplication.java 
 ```
 
- Contextor.getInstance().init(getApplicationContext());
+  Contextor.getInstance().init(getApplicationContext()); 
  
 ```
 
@@ -59,28 +65,38 @@
 
 * 1.4.1 ก๊อปปี้ template จาก libarry
 
-```
-- singletontemplate 
+#### manager
+
+- singletontemplate.java
+
+#### fragment
+
 - fragmenttemplate
+
+#### view
+
 - customviewtemplate
+
 - customviewgrouptemplate
 
-```
-
 ## 1.5.create fragment_main
-#### res/layout
-* 1.5.1 สร้าง fragment เพื่อใช้ แทน activity_main
-```
-create fragment_main.xml 
 
-```
-#### fragment
+
+* 1.5.1 สร้าง fragment เพื่อใช้ แทน activity_main
+
+#### res/layout
+
+create
+ - fragment_main.xml 
+
+
 * 5.2 ก๊อปปี้ template fragmentTemplat เปลี่ยนชื่อเป็น MainFragment
 
-```
-create MainFragment.java
+#### fragment
 
-```
+create
+ - MainFragment.java
+
 
 ## 1.6.add mainfragment to mainactivity 
 
