@@ -49,8 +49,13 @@ create MainFragment.class --> fragment java
 
 -MainActivity
 
-if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction() .add(R.id.contentContainer, MainFragment.newInstance()) .commit(); }
+#####################################################
 
+if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction() 
+.add(R.id.contentContainer, MainFragment.newInstance()) 
+.commit(); }
+
+#####################################################
 -activity_main.xml
 
 #####################################################
