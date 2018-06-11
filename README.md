@@ -53,7 +53,13 @@ if (savedInstanceState == null){ getSupportFragmentManager().beginTransaction() 
 
 -activity_main.xml
 
+#####################################################
+
   <FrameLayout
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+        
+ ######################################################
+
+        
